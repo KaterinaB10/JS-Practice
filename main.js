@@ -331,4 +331,29 @@ console.log(square.calcRectangle());
 
 // Methods for arrays
 console.log("_____________METHODS FOR ARRAYS_____________");
-// N
+// We need to filter names and receive only these ones that do not have more then 5 symbols
+
+const names = ["Oleg", "Anna", "Alexander"];
+const filteredNames = names.filter(function (name) {
+  return name.length < 5;
+});
+
+console.log(filteredNames);
+
+// We need to make all names to be shown the same
+
+const userNames = ["INNa", "annA", "olEg"];
+const standartUserNames = userNames.map((username) => {
+  return username.toUpperCase();
+});
+
+console.log(standartUserNames);
+
+// We need to know if there is any number in array (.some method)
+const arrayWithNumber = ["Hello", 2];
+console.log(arrayWithNumber.some((item) => typeof item === "number"));
+
+// We need to combine all numbers from array
+const numbersArr = [2, 3, 4, 5];
+const result = numbersArr.reduce((sum, current) => sum + current);
+console.log(result);
