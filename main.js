@@ -287,5 +287,26 @@ console.log(parseInt("5px", 10));
 // from string to number
 console.log(+"10");
 
-// --
-console.log("_____________--_____________");
+// Complex function
+console.log("_____________COMPLEX FUNCTION_____________");
+// Name of function is important to make from capital letter
+function User(name, id, age) {
+  this.name = name;
+  this.id = id;
+  this.age = age;
+  this.admin = false;
+  this.hello = function () {
+    console.log(`Hello ${this.name}`);
+  };
+}
+// we saying this name id the name from () in the beggining of the function
+
+const john = new User("John", 2, 20);
+console.log(john);
+console.log(john.hello());
+
+User.prototype.exit = function () {
+  console.log(`See you soon ${this.name}`);
+};
+
+console.log(john.exit());
