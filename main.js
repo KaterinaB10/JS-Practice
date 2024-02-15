@@ -289,7 +289,7 @@ console.log(+"10");
 
 // Complex function
 console.log("_____________COMPLEX FUNCTION_____________");
-// Name of function is important to make from capital letter
+// Name of this function is important to make from capital letter
 function User(name, id, age) {
   this.name = name;
   this.id = id;
@@ -310,3 +310,25 @@ User.prototype.exit = function () {
 };
 
 console.log(john.exit());
+
+// Classes
+console.log("_____________CLASSES_____________");
+// Names of classes start ALWAYS with capital letter
+
+class Rectangle {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+  calcRectangle() {
+    return this.height * this.width;
+  }
+}
+
+const square = new Rectangle(2, 2);
+console.log(square);
+console.log(square.calcRectangle());
+
+// Methods for arrays
+console.log("_____________METHODS FOR ARRAYS_____________");
+// N
